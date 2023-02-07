@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+/*MIXIN*/
+/*Estilos generales*/
+.menuInicio {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(72, 72, 72);
+}
+.menuInicio .logoCarrito {
+  margin: 1rem 2rem;
+  transform: scale(1.9);
+  transition: 2s;
+  cursor: pointer;
+}
+.menuInicio .logoCarrito:hover {
+  transform: scale(2.2);
+  background-color: rgb(217, 217, 217);
+  opacity: 0.7;
+  border-radius: 5rem;
+}
+
+.divTienda {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards {
+  border: solid 0.1rem;
+  margin: 1rem;
+  padding: 1rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.cards h3 {
+  text-align: center;
+}
+.cards p {
+  text-align: center;
+}
+.cards img {
+  width: 90%;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.cards button {
+  border: none;
+  border-radius: 4rem;
+  outline: 0;
+  padding: 1.2rem;
+  color: rgb(255, 255, 255);
+  background-color: black;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.8rem;
+  transition: 0.4s;
+}
+.cards button:hover {
+  opacity: 0.7;
+}
+
+.carousel-inner {
+  height: 35rem;
+  margin: 2rem auto;
+  max-width: 100%;
+}
+
+.modal-container {
+  width: 90%;
+  margin: 0 10rem;
+  max-height: 88vh;
+  color: rgb(0, 0, 0);
+  background-color: #ececec;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  overflow: auto;
+  z-index: 2;
+  top: 2rem;
+  scrollbar-color: none;
+}
+
+.modal-container::-webkit-scrollbar {
+  display: none;
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #4a4a4a;
+  color: aliceblue;
+  width: 100%;
+}
+
+.modal-header-title {
+  justify-self: start;
+}
+
+.modal-header-button {
+  cursor: pointer;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 1rem;
+}
+
+.modal-contanier > div > img {
+  height: 12rem;
+  width: 12rem;
+}
+
+.total-content {
+  font-size: 2.5rem;
+  padding: 2rem;
+  text-align: center;
+  padding-top: 2rem;
+  background-color: rgb(43, 43, 43);
+  color: rgb(255, 255, 255);
+}
+
+.delete-product {
+  cursor: pointer;
+}
+
+.cantidad-carrito {
+  background-color: rgb(174, 41, 41);
+  color: rgb(255, 255, 255);
+  border-radius: 70%;
+  font-size: 0.8rem;
+  padding: 0.2rem;
+  top: 0.4rem;
+  right: 0.4rem;
+  position: absolute;
+  display: none;
+}
+
+.sumar {
+  cursor: pointer;
+}
+
+.restar {
+  cursor: pointer;
+}
+
+.irApagar {
+  background-color: rgb(50, 50, 50);
+  border-radius: 50%;
+  font-size: 1.5rem;
+  padding: 0.6rem;
+  margin: 1rem;
+  transition: 1.2s;
+}
+.irApagar a {
+  text-decoration: none;
+  color: #ececec;
+}
+.irApagar:hover {
+  transform: scale(1.1);
+  opacity: 0.7;
+  background-color: rgb(99, 99, 99);
+}
+
+/*# sourceMappingURL=style.css.map */
