@@ -22,7 +22,7 @@ const celulares = [
     },
     {
         id: 3,
-        modelo: "Mmodelo A 53 5G",
+        modelo: "Modelo A 53 5G",
         camara:"Camara 30mp",
         memoria:"Memoria 512Mb",
         precio: 125000,

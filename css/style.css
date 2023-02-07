@@ -43,16 +43,18 @@ html {
   border: solid 0.1rem;
   margin: 1rem;
   padding: 1rem;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .cards h3 {
   text-align: center;
+  font-size: 1.3rem;
 }
 .cards p {
   text-align: center;
 }
 .cards img {
-  width: 90%;
+  width: 80%;
+  margin-bottom: 6rem;
 }
 
 .price {
@@ -85,7 +87,7 @@ html {
 
 .modal-container {
   width: 90%;
-  margin: 0 10rem;
+  margin: 5rem 10rem;
   max-height: 88vh;
   color: rgb(0, 0, 0);
   background-color: #ececec;
