@@ -10,7 +10,7 @@
     modalContainer.append (modalHeader);
 
     const modalbutton= document.createElement("h1");
-    modalbutton.innerText="Volver a la tienda";
+    modalbutton.innerText=" ⬅️ Volver a la tienda";
     modalbutton.className="modal-header-button";
 
     modalbutton.addEventListener("click", ()=> {
@@ -41,13 +41,28 @@
 
     let restar = carritoContent.querySelector(".restar")
 
-    restar.addEventListener ("click", () =>{
-        if(product.cantidad!==1){
-            product.cantidad--;
-        }
-        saveLocal();
-        pintarCarrito();
-    });
+
+
+restar.addEventListener ("click", seguroRestar)
+    function seguroRestar (){
+        Swal.fire({
+            title: 'Seguro q desea quitar este producto?',
+            text: "Si lo borras , no podras volver atras",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, quitar del carrito!'
+            }).then((result) => {
+            if (result.isConfirmed && product.cantidad!==1 && product.cantidad--)  {
+            Swal.fire(
+                'Listo!', 'Este producto se quito de tu carrito.', 'success'
+            )
+            }
+            saveLocal();
+            pintarCarrito();
+            })
+    }
 
     let sumar = carritoContent.querySelector(".sumar")
 
