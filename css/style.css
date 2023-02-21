@@ -187,4 +187,13 @@ html {
   background-color: rgba(2, 183, 255, 0.854);
 }
 
+#simulate {
+  background-color: #4a4a4a;
+  border: none;
+  transition: 0.6s;
+}
+#simulate:hover {
+  opacity: 0.7;
+}
+
 /*# sourceMappingURL=style.css.map */

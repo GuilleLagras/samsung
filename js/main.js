@@ -10,18 +10,6 @@ let carrito = JSON.parse (localStorage.getItem("Compra")) || []; // get localsto
 // Mensaje de bienvenida
 
 
-    // Swal.fire({
-    //     title: 'Bienvenido/a ',
-    //     imageUrl:'img/logo.png' ,
-    //     html:
-    //         'Aqui encontraras las mejores ofertas sobre todos nuestros productos SAMSUNG, ',
-    //     showCloseButton: true,
-    //     focusConfirm: false,
-    //     confirmButtonText:
-    //     "Ingresar a la tienda",
-    //     });
-
-
     (async () => {
 
         const { value: text } = await Swal.fire({
@@ -29,7 +17,8 @@ let carrito = JSON.parse (localStorage.getItem("Compra")) || []; // get localsto
             imageUrl:'img/logo.png' ,
             input: 'text',
             inputLabel: 'Por favor, ingrese su nombre',
-            inputPlaceholder: 'ingrese su nombre aqui'
+            inputPlaceholder: 'ingrese su nombre aqui',
+            confirmButtonText: "Ingresar a la tienda",
         })
         if (text) {
             Swal.fire(`Bienvenido/a: ${text} ,
@@ -70,13 +59,13 @@ data.forEach((celus)=> {
         destination: './pages/pagar.html',
         newWindow: true,
         close: true,
-        gravity: "top", // `top` or `bottom`
-        position: "left", // `left`, `center` or `right`
-        stopOnFocus: true, // Prevents dismissing of toast on hover
+        gravity: "top", 
+        position: "left", 
+        stopOnFocus: true, 
         style: {
         background: "radial-gradient(circle, rgba(68,95,120,0.7455357142857143) 0%, rgba(0,0,0,0.9864320728291317) 100%)",
         },
-        onClick: function(){} // Callback after click
+        onClick: function(){}
         }).showToast();
     }
 

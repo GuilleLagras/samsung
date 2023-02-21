@@ -24,8 +24,8 @@ formulario.addEventListener('submit', (e) => {
     e.preventDefault()
 
     const cuotaPrestamo = obtenerCuotaPrestamo()
-    const total = obtenerTotal(cuotaPrestamo)
-    pintarPrestamo(total)
+    const totalFinanciar = obtenerTotal(cuotaPrestamo)
+    pintarPrestamo(totalFinanciar)
 });
 
 // Obtener cuota del préstamo
@@ -35,22 +35,22 @@ const obtenerCuotaPrestamo = () => {
     return cuotaPrestamo
 };
 
-// Obtenemos el total a devolver
+// Obtenemos el totalFinanciar a devolver
 
 const obtenerTotal = (cuotaPrestamo) => {
-    const total = Math.ceil(cuotaPrestamo) * cuotas.value
-    return total
+    const totalFinanciar = Math.ceil(cuotaPrestamo) * cuotas.value
+    return totalFinanciar
 };
 
 
 
 // Pintar los datos en el DOM
 
-const pintarPrestamo = (total) => {
+const pintarPrestamo = (totalPintar) => {
     montoFinal.innerText = monto.value
     cuotasFinales.innerText = cuotas.value
-    intereses.innerText = total - monto.value
-    totalADevolver.innerText = total
+    intereses.innerText = totalPintar - monto.value
+    totalADevolver.innerText = totalPintar
 };
 
 

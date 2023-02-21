@@ -75,6 +75,7 @@ restar.addEventListener ("click", seguroRestar)
     //---Eliminar celulares---
 
 
+
     let eliminar=document.createElement("span");
 
     eliminar.innerHTML="❌"
@@ -83,17 +84,19 @@ restar.addEventListener ("click", seguroRestar)
     eliminar.addEventListener ("click", eliminarProducto)
     });
     
-const total= carrito.reduce((acc,el) => acc +el.precio* el.cantidad,0);
+    // ------Total compra----
+    
+    const total= carrito.reduce((acc,el) => acc +el.precio* el.cantidad,0);
 
-const totalCompra = document.createElement("div")
-totalCompra.className= "total-content"
-totalCompra.innerHTML = `Total a pagar : ${total}$`;
-modalContainer.append(totalCompra);
-modalContainer.append(irApagar)
-};
-
-verCarrito.addEventListener("click" , pintarCarrito);
-const eliminarProducto=()=> {
+    const totalCompra = document.createElement("div")
+    totalCompra.className= "total-content"
+    totalCompra.innerHTML = `Total a pagar : ${total}$`;
+    modalContainer.append(totalCompra);
+    modalContainer.append(irApagar)
+    };
+    
+    verCarrito.addEventListener("click" , pintarCarrito);
+    const eliminarProducto=()=> {
     const foundId =carrito.find((element) => element.id);
 
     carrito = carrito.filter((carritoId) => {
